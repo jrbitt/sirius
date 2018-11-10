@@ -44,11 +44,14 @@ func concat(t):
 	else:
 		string = string + t
 	
+func _get_current_string():
+	return string
+	
 func on_key_pressed(k):
 	if k == "enter":
 		emit_signal("enter_pressed",string)
 		string = ""
 	else:
-		emit_signal("key_pressed",k)
 		concat(k)
-	print(k)
+		emit_signal("key_pressed",k)
+		

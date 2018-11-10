@@ -46,7 +46,6 @@ alignment = 0
 
 [node name="liine0" type="HBoxContainer" parent="lines" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -78,7 +77,6 @@ margin_right = 186.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "2"
 
 [node name="k3" parent="lines/liine0" index="2" instance=ExtResource( 4 )]
@@ -88,7 +86,6 @@ margin_right = 250.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "3"
 
 [node name="k4" parent="lines/liine0" index="3" instance=ExtResource( 4 )]
@@ -98,7 +95,6 @@ margin_right = 314.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "4"
 
 [node name="k5" parent="lines/liine0" index="4" instance=ExtResource( 4 )]
@@ -108,7 +104,6 @@ margin_right = 378.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "5"
 
 [node name="k6" parent="lines/liine0" index="5" instance=ExtResource( 4 )]
@@ -118,7 +113,6 @@ margin_right = 442.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "6"
 
 [node name="k7" parent="lines/liine0" index="6" instance=ExtResource( 4 )]
@@ -128,7 +122,6 @@ margin_right = 506.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "7"
 
 [node name="k8" parent="lines/liine0" index="7" instance=ExtResource( 4 )]
@@ -138,7 +131,6 @@ margin_right = 570.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "8"
 
 [node name="k9" parent="lines/liine0" index="8" instance=ExtResource( 4 )]
@@ -148,7 +140,6 @@ margin_right = 634.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "9"
 
 [node name="k10" parent="lines/liine0" index="9" instance=ExtResource( 4 )]
@@ -158,7 +149,6 @@ margin_right = 698.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "0"
 
 [node name="line1" type="HBoxContainer" parent="lines" index="1"]
@@ -196,7 +186,6 @@ margin_right = 186.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "W"
 
 [node name="k3" parent="lines/line1" index="2" instance=ExtResource( 4 )]
@@ -206,7 +195,6 @@ margin_right = 250.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "E"
 
 [node name="k4" parent="lines/line1" index="3" instance=ExtResource( 4 )]
@@ -216,7 +204,6 @@ margin_right = 314.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "R"
 
 [node name="k5" parent="lines/line1" index="4" instance=ExtResource( 4 )]
@@ -226,7 +213,6 @@ margin_right = 378.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "T"
 
 [node name="k6" parent="lines/line1" index="5" instance=ExtResource( 4 )]
@@ -236,7 +222,6 @@ margin_right = 442.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "Y"
 
 [node name="k7" parent="lines/line1" index="6" instance=ExtResource( 4 )]
@@ -246,7 +231,6 @@ margin_right = 506.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "U"
 
 [node name="k8" parent="lines/line1" index="7" instance=ExtResource( 4 )]
@@ -256,7 +240,6 @@ margin_right = 570.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "I"
 
 [node name="k9" parent="lines/line1" index="8" instance=ExtResource( 4 )]
@@ -266,7 +249,6 @@ margin_right = 634.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "O"
 
 [node name="k10" parent="lines/line1" index="9" instance=ExtResource( 4 )]
@@ -276,7 +258,6 @@ margin_right = 698.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "P"
 
 [node name="line2" type="HBoxContainer" parent="lines" index="2"]
@@ -304,7 +285,6 @@ margin_right = 60.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="k12" parent="lines/line2" index="1" instance=ExtResource( 4 )]
 
@@ -313,7 +293,6 @@ margin_right = 124.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "S"
 
 [node name="k13" parent="lines/line2" index="2" instance=ExtResource( 4 )]
@@ -323,7 +302,6 @@ margin_right = 188.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "D"
 
 [node name="k14" parent="lines/line2" index="3" instance=ExtResource( 4 )]
@@ -333,7 +311,6 @@ margin_right = 252.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "F"
 
 [node name="k15" parent="lines/line2" index="4" instance=ExtResource( 4 )]
@@ -343,7 +320,6 @@ margin_right = 316.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "G"
 
 [node name="k16" parent="lines/line2" index="5" instance=ExtResource( 4 )]
@@ -353,7 +329,6 @@ margin_right = 380.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "H"
 
 [node name="k17" parent="lines/line2" index="6" instance=ExtResource( 4 )]
@@ -363,7 +338,6 @@ margin_right = 444.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "I"
 
 [node name="k18" parent="lines/line2" index="7" instance=ExtResource( 4 )]
@@ -373,7 +347,6 @@ margin_right = 508.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "J"
 
 [node name="k19" parent="lines/line2" index="8" instance=ExtResource( 4 )]
@@ -383,7 +356,6 @@ margin_right = 572.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "K"
 
 [node name="k20" parent="lines/line2" index="9" instance=ExtResource( 4 )]
@@ -393,7 +365,6 @@ margin_right = 636.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "L"
 
 [node name="enter" parent="lines/line2" index="10" instance=ExtResource( 4 )]
@@ -434,7 +405,6 @@ margin_right = 218.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "Z"
 
 [node name="k22" parent="lines/line3" index="1" instance=ExtResource( 4 )]
@@ -444,7 +414,6 @@ margin_right = 282.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "X"
 
 [node name="k23" parent="lines/line3" index="2" instance=ExtResource( 4 )]
@@ -454,7 +423,6 @@ margin_right = 346.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "C"
 
 [node name="k24" parent="lines/line3" index="3" instance=ExtResource( 4 )]
@@ -464,7 +432,6 @@ margin_right = 410.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "V"
 
 [node name="k25" parent="lines/line3" index="4" instance=ExtResource( 4 )]
@@ -474,7 +441,6 @@ margin_right = 474.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "B"
 
 [node name="k26" parent="lines/line3" index="5" instance=ExtResource( 4 )]
@@ -484,7 +450,6 @@ margin_right = 538.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "N"
 
 [node name="k27" parent="lines/line3" index="6" instance=ExtResource( 4 )]
@@ -494,7 +459,6 @@ margin_right = 602.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Rect", "Theme" ]
 key = "M"
 
 [node name="line4" type="HBoxContainer" parent="lines" index="4"]

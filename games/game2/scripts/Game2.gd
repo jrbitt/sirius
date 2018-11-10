@@ -1,13 +1,20 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	$secret_word.word = "Macaco".to_upper()
 
 func _on_Keyboard_enter_pressed(s):
-	print(s)
+	if $secret_word.is_correct():
+		print("sucesso")
+	else:
+		$secret_word.reset()
+
+
+func _on_keyboard_key_pressed(k):
+	var s = $keyboard._get_current_string()
+	$secret_word._set_current_string(s)
+
+func _on_secret_word_correct_secret_word(value):
+	if value:
+		print("sucesso")
