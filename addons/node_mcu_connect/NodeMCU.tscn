@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/node_mcu_connect/NodeMCUConnection.gd" type="Script" id=1]
+
+[node name="NodeMCU" type="Node" index="0"]
+
+script = ExtResource( 1 )
+prefix_ip_network = "192.168."
+
+[node name="request" type="HTTPRequest" parent="." index="0"]
+
+download_file = ""
+use_threads = false
+body_size_limit = -1
+max_redirects = 8
+
+[connection signal="request_completed" from="request" to="." method="_on_request_request_completed"]
+
+

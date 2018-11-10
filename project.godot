@@ -13,6 +13,10 @@ config_version=3
 config/name="Sirius"
 config/icon="res://icon.png"
 
+[autoload]
+
+Sirius="*res://addons/node_mcu_connect/NodeMCU.tscn"
+
 [display]
 
 window/size/width=800
