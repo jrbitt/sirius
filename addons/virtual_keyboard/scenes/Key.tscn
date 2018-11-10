@@ -1,16 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Addons/TecladoVirtual/scripts/Botao.gd" type="Script" id=1]
+[ext_resource path="res://addons/virtual_keyboard/scripts/Key.gd" type="Script" id=1]
+[ext_resource path="res://assets/gui/back_key.svg" type="Texture" id=2]
 
-
-[node name="Botao" type="Control" index="0"]
+[node name="Key" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 58.0
+margin_bottom = 62.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -18,10 +18,13 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-tecla = "A"
-botao_normal = null
+_sections_unfolded = [ "Theme" ]
+key = "A"
+key_theme = null
+normal_key = ExtResource( 2 )
+special = false
 
-[node name="botao" type="TextureButton" parent="." index="0"]
+[node name="image" type="TextureButton" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -40,8 +43,31 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+texture_normal = ExtResource( 2 )
 _sections_unfolded = [ "Textures" ]
 
-[connection signal="button_up" from="botao" to="." method="_on_botao_button_up"]
+[node name="label" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 56.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "A"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
+
+[connection signal="button_up" from="image" to="." method="_on_image_button_up"]
 
 
