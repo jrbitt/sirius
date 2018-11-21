@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/gui/enter_key.svg" type="Texture" id=5]
 [ext_resource path="res://assets/gui/space_key.svg" type="Texture" id=6]
 
+
+
 [node name="Keyboard" type="MarginContainer"]
 
 anchor_left = 0.0
