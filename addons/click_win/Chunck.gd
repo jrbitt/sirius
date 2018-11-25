@@ -1,18 +1,18 @@
+extends Area2D
 
-extends Sprite
+export(String) var description = "Name" setget _set_description, _get_description
 
-export(String) var name = "Name" setget _set_name
+signal clicked(descr)
 
-func _set_name(n):
-	name = n
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
+		emit_signal("clicked",description)
+
+func _set_description(d):
+	description = d
+
+func _get_description():
+	return description
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
+	set_process_input(true)

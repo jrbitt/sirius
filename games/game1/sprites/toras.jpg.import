@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/helicoptero.jpg-b9185c9c8ead289fe697d66193a3b592.stex"
+path="res://.import/toras.jpg-7f7142c076fde06bfedb9ac6c7a94a9d.stex"
 
 [deps]
 
-source_file="res://games/game1/sprites/helicoptero.jpg"
-dest_files=[ "res://.import/helicoptero.jpg-b9185c9c8ead289fe697d66193a3b592.stex" ]
+source_file="res://games/game1/sprites/toras.jpg"
+dest_files=[ "res://.import/toras.jpg-7f7142c076fde06bfedb9ac6c7a94a9d.stex" ]
 
 [params]
 

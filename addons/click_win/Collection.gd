@@ -7,14 +7,24 @@ export(int) var num_elements = 3
 # var b = "textvar"
 enum State{READY, ELEMENTS} 
 
+signal clicked(description)
+
 var max_tokens = 0
 var state = READY
 var indexes = []
+var enabled = true
 
+func _set_enabled(v):
+	enabled = v
+	
 func _ready():
-	self.visible = false
 	randomize()
 	max_tokens = get_child_count()
+	for c in get_children():
+		c.connect("clicked",self,"on_clicked")
+
+func _reset():
+	state = READY
 
 func _choice_elements():
 	if state == READY:
@@ -23,7 +33,7 @@ func _choice_elements():
 		var c = 0
 		while c != num_elements:
 			var r = randi() % max_tokens
-			if indexes.bsearch(r) == -1:
+			if indexes.find(r,0) == -1:
 				indexes.append(r)
 				c = c + 1
 				
@@ -32,3 +42,7 @@ func _get_element(i):
 		return get_child(indexes[i])
 	else:
 		return null
+		
+func on_clicked(descr):
+	if enabled:
+		emit_signal("clicked",descr)
