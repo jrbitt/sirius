@@ -7,7 +7,7 @@ export(int) var num_elements = 3
 # var b = "textvar"
 enum State{READY, ELEMENTS} 
 
-signal clicked(description)
+signal clicked(description,index)
 
 var max_tokens = 0
 var state = READY
@@ -25,6 +25,8 @@ func _ready():
 
 func _reset():
 	state = READY
+	for c in get_children():
+		c._reset()
 
 func _choice_elements():
 	if state == READY:
@@ -43,6 +45,6 @@ func _get_element(i):
 	else:
 		return null
 		
-func on_clicked(descr):
+func on_clicked(descr,index):
 	if enabled:
-		emit_signal("clicked",descr)
+		emit_signal("clicked",descr,index)

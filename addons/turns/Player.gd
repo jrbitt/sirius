@@ -26,6 +26,12 @@ func _get_errors():
 func _get_wins():
 	return wins
 	
+func _set_errors(e):
+	errors = e
+	
+func _set_wins(w):
+	wins = w
+	
 func _set_player_name(v):
 	player_name = v
 

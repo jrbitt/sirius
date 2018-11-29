@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://games/game1/scripts/Game1.gd" type="Script" id=1]
+[ext_resource path="res://addons/turns/TurnManager.gd" type="Script" id=2]
+[ext_resource path="res://addons/turns/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/points/PointsHeader.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/secret_word/SecretWord.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/gui/back_key_secret.svg" type="Texture" id=7]
+[ext_resource path="res://assets/gui/gui_games.tres" type="Theme" id=8]
+[ext_resource path="res://addons/click_win/Chunck.tscn" type="PackedScene" id=9]
+
+[node name="Game2" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+game_name = "Resgate a Princesa Léia"
+min_players = 2
+max_players = 4
+authors = "Marley & Alexandre"
+game_state = null
+
+[node name="players" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+script = ExtResource( 2 )
+max_turns = 3
+
+[node name="Player" parent="players" index="0" instance=ExtResource( 3 )]
+
+player_name = "João"
+color = 0
+
+[node name="Player2" parent="players" index="1" instance=ExtResource( 3 )]
+
+player_name = "Maria"
+color = 0
+
+[node name="Header" parent="." index="1" instance=ExtResource( 4 )]
+
+[node name="keyboard" parent="." index="2" instance=ExtResource( 5 )]
+
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 900.0
+margin_right = 739.0
+margin_bottom = 1216.0
+
+[node name="secret_word" parent="." index="3" instance=ExtResource( 6 )]
+
+margin_left = 2.0
+margin_top = 364.0
+margin_right = 802.0
+margin_bottom = 429.0
+_sections_unfolded = [ "Rect" ]
+back_texture = ExtResource( 7 )
+back_dimension = Vector2( 60, 60 )
+key_theme = ExtResource( 8 )
+show_letters = true
+character = "*"
+
+[node name="tokens" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="w1" parent="tokens" index="0" instance=ExtResource( 9 )]
+
+visible = false
+description = "Inteligente"
+
+[node name="w2" parent="tokens" index="1" instance=ExtResource( 9 )]
+
+visible = false
+description = "Veloz"
+
+[node name="w3" parent="tokens" index="2" instance=ExtResource( 9 )]
+
+visible = false
+description = "Querido"
+
+[node name="w4" parent="tokens" index="3" instance=ExtResource( 9 )]
+
+visible = false
+description = "Esperto"
+
+[node name="w5" parent="tokens" index="4" instance=ExtResource( 9 )]
+
+visible = false
+description = "Alegre"
+
+[node name="w6" parent="tokens" index="5" instance=ExtResource( 9 )]
+
+visible = false
+description = "Decidido"
+
+[node name="w7" parent="tokens" index="6" instance=ExtResource( 9 )]
+
+visible = false
+description = "Bondoso"
+
+[node name="w8" parent="tokens" index="7" instance=ExtResource( 9 )]
+
+visible = false
+description = "Justo"
+
+[node name="w9" parent="tokens" index="8" instance=ExtResource( 9 )]
+
+visible = false
+description = "Querido"
+
+[connection signal="enter_pressed" from="keyboard" to="." method="_on_Keyboard_enter_pressed"]
+
+[connection signal="key_pressed" from="keyboard" to="." method="_on_keyboard_key_pressed"]
+
+[connection signal="correct_secret_word" from="secret_word" to="." method="_on_secret_word_correct_secret_word"]
+
+

@@ -1,18 +1,22 @@
 extends Node
 
-export(String) var prefix_ip_network = "192.168."
+export(String) var ip_network = "192.168.1.10"
 
 var url = ""
+
+var active = true
+
+signal disconnected
+signal someone_arrived
+
+func _is_active():
+	return active
 
 func _ready():
 	define_ip()
 
 func define_ip():
-	var ips = IP.get_local_addresses()
-	for i in ips:
-		if i.begins_with(prefix_ip_network):
-			var index = i.rfindn(".")
-			url = "http://"+i.substr(0,index)+".1/"
+	url = "http://"+ip_network
 
 func near():
 	$request.request(url+"temAlguemProximo/")
@@ -45,7 +49,9 @@ func display(sequence):
 	$request.request(url+"display/p="+ssize_seq+";"+sseq)
 	
 func _on_request_request_completed(result, response_code, headers, body):
-	
-	# TODO
-	
-	pass # replace with function body
+	if result != 200:
+		active = false
+		emit_signal("disconnected")
+	else:
+		if body.contains("near:ok"):
+			emit_signal("someone_arrived") 
