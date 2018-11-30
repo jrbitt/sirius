@@ -87,7 +87,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[node name="Game1" type="Node2D"]
+[node name="Game1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -148,6 +148,7 @@ shape = SubResource( 1 )
 
 [node name="players" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 script = ExtResource( 7 )
 max_turns = 3
 
@@ -163,6 +164,7 @@ color = 0
 
 [node name="tokens" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
 script = ExtResource( 9 )
 num_elements = 3
 
@@ -375,6 +377,7 @@ _sections_unfolded = [ "Grow Direction", "Size Flags", "Visibility" ]
 
 [node name="keyboard" parent="." index="6" instance=ExtResource( 24 )]
 
+visible = false
 margin_bottom = 316.0
 
 [node name="secret_word" parent="." index="7" instance=ExtResource( 25 )]

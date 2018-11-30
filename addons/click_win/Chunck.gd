@@ -28,6 +28,9 @@ func _set_description(d):
 func _get_description():
 	return description
 
+func _get_sprite():
+	return $sprite
+	
 func _reset():
 	_set_enabled(true)
 	index = -1

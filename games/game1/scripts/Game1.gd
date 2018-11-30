@@ -1,6 +1,5 @@
 extends "res://games/Game.gd"
 
-var pts = []
 var chunck = null
 var current_player
 
@@ -10,14 +9,13 @@ func _turn():
 	current_player = $players._get_current()
 	$tokens._reset()
 	$tokens._choice_elements()
-	pts.append($p1)
-	pts.append($p2)
-	pts.append($p3)
 	randomize()
 	var r = randi() % 3
 	chunck = $tokens._get_element(r)
+	
 	if chunck != null:
-		$nameInvention.text = chunck._get_description()
+		chunck._get_sprite().global_position = $p1.position
+		
 	for i in range(3):
 		var c = $tokens._get_element(i)
 		c._set_index(i)
