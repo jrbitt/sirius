@@ -27,37 +27,37 @@
 [ext_resource path="res://addons/secret_word/SecretWord.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/gui/back_key_secret.svg" type="Texture" id=26]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 33.302 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 244.402, 10 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 800.239, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 318.91 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 707.313, 459.223 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 288.435, 11.1719 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 5.0
 loop = false
@@ -144,7 +144,7 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( 399.073, 720.014 )
 rotation = 3.14159
 scale = Vector2( 13.9433, -1 )
-shape = SubResource( 7 )
+shape = SubResource( 1 )
 
 [node name="players" type="Node2D" parent="." index="1"]
 
@@ -175,7 +175,6 @@ description = "Para-quedas"
 
 [node name="sprite" parent="tokens/c1" index="0"]
 
-scale = Vector2( 2.27042, 2.27042 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -200,7 +199,6 @@ description = "Ornitóptero"
 
 [node name="sprite" parent="tokens/c3" index="0"]
 
-scale = Vector2( 1.03908, 1.03908 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
@@ -213,7 +211,6 @@ description = "Helicóptero"
 
 [node name="sprite" parent="tokens/c4" index="0"]
 
-scale = Vector2( 2.23892, 2.23892 )
 texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
@@ -231,7 +228,6 @@ description = "Equipamento de mergulho"
 
 [node name="sprite" parent="tokens/c5" index="0"]
 
-scale = Vector2( 1.89839, 1.89839 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
@@ -244,7 +240,6 @@ description = "Ponte giratória"
 
 [node name="sprite" parent="tokens/c6" index="0"]
 
-scale = Vector2( 3.09619, 3.09619 )
 texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
@@ -252,7 +247,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -0.74453, 9.01975 )
 scale = Vector2( 1.94419, 23.8638 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="c7" parent="tokens" index="6" instance=ExtResource( 10 )]
 
@@ -270,7 +265,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0, -45.0228 )
 scale = Vector2( 1, 56.5293 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="c8" parent="tokens" index="7" instance=ExtResource( 10 )]
 
@@ -281,7 +276,6 @@ description = "Skis"
 
 [node name="sprite" parent="tokens/c8" index="0"]
 
-scale = Vector2( 2.0741, 2.0741 )
 texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform" ]
 
@@ -289,7 +283,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -0.252632, -2.47598 )
 scale = Vector2( 51.3902, 2.08727 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="c9" parent="tokens" index="8" instance=ExtResource( 10 )]
 
@@ -300,7 +294,6 @@ description = "Bicicleta"
 
 [node name="sprite" parent="tokens/c9" index="0"]
 
-scale = Vector2( 2.44504, 2.44504 )
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform" ]
 
@@ -308,7 +301,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 34.3945, 12.5779 )
 scale = Vector2( 1.08336, 1.18983 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="c10" parent="tokens" index="9" instance=ExtResource( 10 )]
 
@@ -319,7 +312,6 @@ description = "Perfuradora de toras"
 
 [node name="sprite" parent="tokens/c10" index="0"]
 
-scale = Vector2( 3.0145, 3.01449 )
 texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform" ]
 
@@ -327,7 +319,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 27.4391, -5.31808 )
 scale = Vector2( 1.74552, 66.4685 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="nameInvention" type="Label" parent="." index="3"]
 
@@ -370,7 +362,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/showing = SubResource( 6 )
+anims/showing = SubResource( 7 )
 blend_times = [  ]
 
 [node name="Header" parent="." index="5" instance=ExtResource( 23 )]
