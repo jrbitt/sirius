@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 269.617, 294.576 )
+extents = Vector2( 29.7541, 29.7572 )
 
 [node name="Chunck" type="Area2D"]
 

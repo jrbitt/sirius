@@ -77,7 +77,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[node name="Game1" type="Node2D" index="0"]
+[node name="Game1" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -333,7 +333,6 @@ blend_times = [  ]
 
 [node name="keyboard" parent="." index="5" instance=ExtResource( 19 )]
 
-visible = false
 margin_bottom = 316.0
 
 [node name="secret_word" parent="." index="6" instance=ExtResource( 20 )]

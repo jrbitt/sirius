@@ -1,0 +1,290 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://games/common/SelectCharacter.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/SF Distant Galaxy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/Stjldbl1.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/characters/criancas.png" type="Texture" id=4]
+[ext_resource path="res://addons/color_buttons/color_buttons.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/gui/button_modulate.svg" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 1, 1, 1, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="Theme" id=2]
+
+Panel/styles/panel = SubResource( 1 )
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+_sections_unfolded = [ "Panel", "Panel/styles" ]
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.215686, 0.447059, 1, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Content Margin" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 52
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 44
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="SelectCharacter" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Panel" type="Panel" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -2.0
+margin_top = -32.0
+margin_right = 807.0
+margin_bottom = 1302.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 2 )
+_sections_unfolded = [ "Theme", "custom_styles" ]
+
+[node name="sirius" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_right = 782.0
+margin_bottom = 81.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Sírius I"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="choice" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 175.0
+margin_right = 800.0
+margin_bottom = 231.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Escolha personagem"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="p1" type="Sprite" parent="." index="3"]
+
+position = Vector2( 250, 910 )
+texture = ExtResource( 4 )
+vframes = 8
+hframes = 4
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="p2" type="Sprite" parent="." index="4"]
+
+position = Vector2( 250, 525 )
+texture = ExtResource( 4 )
+vframes = 8
+hframes = 4
+frame = 1
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="p3" type="Sprite" parent="." index="5"]
+
+position = Vector2( 500, 910 )
+texture = ExtResource( 4 )
+vframes = 8
+hframes = 4
+frame = 2
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="p4" type="Sprite" parent="." index="6"]
+
+position = Vector2( 500, 525 )
+texture = ExtResource( 4 )
+vframes = 8
+hframes = 4
+frame = 3
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="color_buttons" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 275.411, 1143.69 )
+
+[node name="c1" parent="color_buttons" index="0"]
+
+editor/display_folded = false
+
+[node name="sprite" parent="color_buttons/c1" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c5" parent="color_buttons" index="1"]
+
+editor/display_folded = false
+description = "4"
+
+[node name="sprite" parent="color_buttons/c5" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c2" parent="color_buttons" index="2"]
+
+description = "1"
+
+[node name="sprite" parent="color_buttons/c2" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c7" parent="color_buttons" index="3"]
+
+description = "5"
+
+[node name="sprite" parent="color_buttons/c7" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c3" parent="color_buttons" index="4"]
+
+description = "2"
+
+[node name="sprite" parent="color_buttons/c3" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c8" parent="color_buttons" index="5"]
+
+description = "6"
+
+[node name="sprite" parent="color_buttons/c8" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c4" parent="color_buttons" index="6"]
+
+description = "3"
+
+[node name="sprite" parent="color_buttons/c4" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="c6" parent="color_buttons" index="7"]
+
+description = "7"
+
+[node name="sprite" parent="color_buttons/c6" index="0"]
+
+texture = ExtResource( 6 )
+
+[connection signal="changed_color" from="color_buttons" to="." method="_on_color_buttons_changed_color"]
+
+
+[editable path="color_buttons"]
+[editable path="color_buttons/c1"]
+[editable path="color_buttons/c5"]
+[editable path="color_buttons/c2"]
+[editable path="color_buttons/c7"]
+[editable path="color_buttons/c3"]
+[editable path="color_buttons/c8"]
+[editable path="color_buttons/c4"]
+[editable path="color_buttons/c6"]
