@@ -1,26 +1,36 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://games/game1/scripts/Game1.gd" type="Script" id=1]
-[ext_resource path="res://addons/turns/TurnManager.gd" type="Script" id=2]
-[ext_resource path="res://addons/turns/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/click_win/Collection.gd" type="Script" id=4]
-[ext_resource path="res://addons/click_win/Chunck.tscn" type="PackedScene" id=5]
-[ext_resource path="res://games/game1/sprites/paraquedas.jpg" type="Texture" id=6]
-[ext_resource path="res://games/game1/sprites/robo.jpg" type="Texture" id=7]
-[ext_resource path="res://games/game1/sprites/ornitoptero.jpg" type="Texture" id=8]
-[ext_resource path="res://games/game1/sprites/helicoptero.jpg" type="Texture" id=9]
-[ext_resource path="res://games/game1/sprites/mergulho.jpg" type="Texture" id=10]
-[ext_resource path="res://games/game1/sprites/ponte.jpg" type="Texture" id=11]
-[ext_resource path="res://games/game1/sprites/asadelta.jpg" type="Texture" id=12]
-[ext_resource path="res://games/game1/sprites/skis.jpg" type="Texture" id=13]
-[ext_resource path="res://games/game1/sprites/bicicleta.jpg" type="Texture" id=14]
-[ext_resource path="res://games/game1/sprites/toras.jpg" type="Texture" id=15]
-[ext_resource path="res://assets/gui/gui_games.tres" type="Theme" id=16]
-[ext_resource path="res://games/game1/sprites/leonardo_base.svg" type="Texture" id=17]
-[ext_resource path="res://addons/points/PointsHeader.tscn" type="PackedScene" id=18]
-[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=19]
-[ext_resource path="res://addons/secret_word/SecretWord.tscn" type="PackedScene" id=20]
-[ext_resource path="res://assets/gui/back_key_secret.svg" type="Texture" id=21]
+[ext_resource path="res://assets/gui/fundo.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/caixaQuiz.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/titulo.png" type="Texture" id=4]
+[ext_resource path="res://games/game1/sprites/botaoOpcao.png" type="Texture" id=5]
+[ext_resource path="res://games/game1/sprites/botaoOpcaoSelecionado.png" type="Texture" id=6]
+[ext_resource path="res://addons/turns/TurnManager.gd" type="Script" id=7]
+[ext_resource path="res://addons/turns/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/click_win/Collection.gd" type="Script" id=9]
+[ext_resource path="res://addons/click_win/Chunck.tscn" type="PackedScene" id=10]
+[ext_resource path="res://games/game1/sprites/paraQuedas.png" type="Texture" id=11]
+[ext_resource path="res://games/game1/sprites/roboTamborilador.png" type="Texture" id=12]
+[ext_resource path="res://games/game1/sprites/ornitoptero.png" type="Texture" id=13]
+[ext_resource path="res://games/game1/sprites/helicoptero.png" type="Texture" id=14]
+[ext_resource path="res://games/game1/sprites/aparelhoMergulho.png" type="Texture" id=15]
+[ext_resource path="res://games/game1/sprites/ponteGiratoria.png" type="Texture" id=16]
+[ext_resource path="res://games/game1/sprites/asaDelta.png" type="Texture" id=17]
+[ext_resource path="res://games/game1/sprites/sobreAgua.png" type="Texture" id=18]
+[ext_resource path="res://games/game1/sprites/bicicleta.png" type="Texture" id=19]
+[ext_resource path="res://games/game1/sprites/perfuradorTora.png" type="Texture" id=20]
+[ext_resource path="res://assets/gui/gui_games.tres" type="Theme" id=21]
+[ext_resource path="res://games/game1/sprites/leonardo_base.svg" type="Texture" id=22]
+[ext_resource path="res://addons/points/PointsHeader.tscn" type="PackedScene" id=23]
+[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=24]
+[ext_resource path="res://addons/secret_word/SecretWord.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/gui/back_key_secret.svg" type="Texture" id=26]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 33.302 )
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -87,80 +97,124 @@ max_players = 2
 authors = "Marley & Alexandre"
 game_state = null
 
-[node name="players" type="Node2D" parent="." index="0"]
+[node name="interface" type="Node2D" parent="." index="0"]
 
-script = ExtResource( 2 )
+[node name="fundo" type="Sprite" parent="interface" index="0"]
+
+position = Vector2( 403.992, 636.28 )
+texture = ExtResource( 2 )
+
+[node name="caixaQuiz" type="Sprite" parent="interface" index="1"]
+
+position = Vector2( 397.018, 654.134 )
+texture = ExtResource( 3 )
+
+[node name="titulo" type="Sprite" parent="interface" index="2"]
+
+position = Vector2( 393.398, 105.168 )
+texture = ExtResource( 4 )
+
+[node name="botoesOpcoes" type="Node2D" parent="interface" index="3"]
+
+[node name="botao1" type="Area2D" parent="interface/botoesOpcoes" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="normal" type="Sprite" parent="interface/botoesOpcoes/botao1" index="0"]
+
+position = Vector2( 401.069, 720.014 )
+texture = ExtResource( 5 )
+
+[node name="selecionado" type="Sprite" parent="interface/botoesOpcoes/botao1" index="1"]
+
+visible = false
+position = Vector2( 403.069, 722.532 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interface/botoesOpcoes/botao1" index="2"]
+
+position = Vector2( 399.073, 720.014 )
+rotation = 3.14159
+scale = Vector2( 13.9433, -1 )
+shape = SubResource( 7 )
+
+[node name="players" type="Node2D" parent="." index="1"]
+
+script = ExtResource( 7 )
 max_turns = 3
 
-[node name="Player" parent="players" index="0" instance=ExtResource( 3 )]
+[node name="Player" parent="players" index="0" instance=ExtResource( 8 )]
 
 player_name = "João"
 color = 0
 
-[node name="Player2" parent="players" index="1" instance=ExtResource( 3 )]
+[node name="Player2" parent="players" index="1" instance=ExtResource( 8 )]
 
 player_name = "Felipe"
 color = 0
 
-[node name="tokens" type="Node2D" parent="." index="1"]
+[node name="tokens" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
-script = ExtResource( 4 )
+script = ExtResource( 9 )
 num_elements = 3
 
-[node name="c1" parent="tokens" index="0" instance=ExtResource( 5 )]
+[node name="c1" parent="tokens" index="0" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 1493.18, 622.356 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Para-quedas"
 
 [node name="sprite" parent="tokens/c1" index="0"]
 
 scale = Vector2( 2.27042, 2.27042 )
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="c2" parent="tokens" index="1" instance=ExtResource( 5 )]
+[node name="c2" parent="tokens" index="1" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 791.941, 256.468 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Robô tamborilador"
 
 [node name="sprite" parent="tokens/c2" index="0"]
 
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="c3" parent="tokens" index="2" instance=ExtResource( 5 )]
+[node name="c3" parent="tokens" index="2" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 1086.9, 251.93 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Ornitóptero"
 
 [node name="sprite" parent="tokens/c3" index="0"]
 
 scale = Vector2( 1.03908, 1.03908 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="c4" parent="tokens" index="3" instance=ExtResource( 5 )]
+[node name="c4" parent="tokens" index="3" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 1091.44, 590.004 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Helicóptero"
 
 [node name="sprite" parent="tokens/c4" index="0"]
 
 scale = Vector2( 2.23892, 2.23892 )
-texture = ExtResource( 9 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c4" index="1"]
@@ -168,32 +222,30 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -2.31676, -5.70314 )
 scale = Vector2( 1.1985, 0.776348 )
 
-[node name="c5" parent="tokens" index="4" instance=ExtResource( 5 )]
+[node name="c5" parent="tokens" index="4" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 637.652, 578.66 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Equipamento de mergulho"
 
 [node name="sprite" parent="tokens/c5" index="0"]
 
 scale = Vector2( 1.89839, 1.89839 )
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="c6" parent="tokens" index="5" instance=ExtResource( 5 )]
+[node name="c6" parent="tokens" index="5" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 1415.9, 340.42 )
-scale = Vector2( 0.506067, 0.506067 )
+_sections_unfolded = [ "Transform" ]
 description = "Ponte giratória"
 
 [node name="sprite" parent="tokens/c6" index="0"]
 
 scale = Vector2( 3.09619, 3.09619 )
-texture = ExtResource( 11 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c6" index="1"]
@@ -202,18 +254,16 @@ position = Vector2( -0.74453, 9.01975 )
 scale = Vector2( 1.94419, 23.8638 )
 shape = SubResource( 1 )
 
-[node name="c7" parent="tokens" index="6" instance=ExtResource( 5 )]
+[node name="c7" parent="tokens" index="6" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 417.487, 249.585 )
-scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
 description = "Asa delta"
 
 [node name="sprite" parent="tokens/c7" index="0"]
 
-texture = ExtResource( 12 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c7" index="1"]
@@ -222,19 +272,17 @@ position = Vector2( 0, -45.0228 )
 scale = Vector2( 1, 56.5293 )
 shape = SubResource( 2 )
 
-[node name="c8" parent="tokens" index="7" instance=ExtResource( 5 )]
+[node name="c8" parent="tokens" index="7" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( 213.487, 653.585 )
-scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
 description = "Skis"
 
 [node name="sprite" parent="tokens/c8" index="0"]
 
 scale = Vector2( 2.0741, 2.0741 )
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c8" index="1"]
@@ -243,19 +291,17 @@ position = Vector2( -0.252632, -2.47598 )
 scale = Vector2( 51.3902, 2.08727 )
 shape = SubResource( 3 )
 
-[node name="c9" parent="tokens" index="8" instance=ExtResource( 5 )]
+[node name="c9" parent="tokens" index="8" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -163.974, 189.274 )
-scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
 description = "Bicicleta"
 
 [node name="sprite" parent="tokens/c9" index="0"]
 
 scale = Vector2( 2.44504, 2.44504 )
-texture = ExtResource( 14 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c9" index="1"]
@@ -264,19 +310,17 @@ position = Vector2( 34.3945, 12.5779 )
 scale = Vector2( 1.08336, 1.18983 )
 shape = SubResource( 4 )
 
-[node name="c10" parent="tokens" index="9" instance=ExtResource( 5 )]
+[node name="c10" parent="tokens" index="9" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -518.053, 546.693 )
-scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
 description = "Perfuradora de toras"
 
 [node name="sprite" parent="tokens/c10" index="0"]
 
 scale = Vector2( 3.0145, 3.01449 )
-texture = ExtResource( 15 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" parent="tokens/c10" index="1"]
@@ -285,7 +329,7 @@ position = Vector2( 27.4391, -5.31808 )
 scale = Vector2( 1.74552, 66.4685 )
 shape = SubResource( 5 )
 
-[node name="nameInvention" type="Label" parent="." index="2"]
+[node name="nameInvention" type="Label" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -301,7 +345,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 21 )
 text = "Teste"
 align = 1
 autowrap = true
@@ -310,12 +354,12 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="leonardo" type="Sprite" parent="." index="3"]
+[node name="leonardo" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 411, 1455.18 )
-texture = ExtResource( 17 )
+texture = ExtResource( 22 )
 hframes = 2
 _sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
@@ -329,14 +373,20 @@ playback_speed = 1.0
 anims/showing = SubResource( 6 )
 blend_times = [  ]
 
-[node name="Header" parent="." index="4" instance=ExtResource( 18 )]
+[node name="Header" parent="." index="5" instance=ExtResource( 23 )]
 
-[node name="keyboard" parent="." index="5" instance=ExtResource( 19 )]
+margin_left = 265.0
+margin_top = 174.0
+margin_right = 803.0
+margin_bottom = 262.0
+_sections_unfolded = [ "Grow Direction", "Size Flags", "Visibility" ]
+
+[node name="keyboard" parent="." index="6" instance=ExtResource( 24 )]
 
 visible = false
 margin_bottom = 316.0
 
-[node name="secret_word" parent="." index="6" instance=ExtResource( 20 )]
+[node name="secret_word" parent="." index="7" instance=ExtResource( 25 )]
 
 visible = false
 margin_left = 2.0
@@ -344,23 +394,23 @@ margin_top = 364.0
 margin_right = 802.0
 margin_bottom = 429.0
 _sections_unfolded = [ "Rect" ]
-back_texture = ExtResource( 21 )
+back_texture = ExtResource( 26 )
 back_dimension = Vector2( 60, 60 )
-key_theme = ExtResource( 16 )
+key_theme = ExtResource( 21 )
 show_letters = true
 character = "*"
 
-[node name="p1" type="Position2D" parent="." index="7"]
+[node name="p1" type="Position2D" parent="." index="8"]
 
 position = Vector2( 406, 267 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="p2" type="Position2D" parent="." index="8"]
+[node name="p2" type="Position2D" parent="." index="9"]
 
 position = Vector2( 406, 585 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="p3" type="Position2D" parent="." index="9"]
+[node name="p3" type="Position2D" parent="." index="10"]
 
 position = Vector2( 406, 895 )
 _sections_unfolded = [ "Transform" ]
