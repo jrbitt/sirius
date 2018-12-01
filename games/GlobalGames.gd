@@ -1,5 +1,7 @@
 extends Node
 
+var num_players
+
 func _winners():
 	var ret = []
 	var score = $players._get_best()._get_score()

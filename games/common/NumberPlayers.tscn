@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://games/common/DefineName.gd" type="Script" id=1]
+[ext_resource path="res://games/common/NumberPlayers.gd" type="Script" id=1]
 [ext_resource path="res://assets/gui/DefineName.tres" type="StyleBox" id=2]
 [ext_resource path="res://assets/fonts/SF Distant Galaxy.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/fonts/Stjldbl1.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://assets/characters/criancas.png" type="Texture" id=5]
-[ext_resource path="res://assets/gui/arrow_right2.svg" type="Texture" id=6]
-[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/gui/arrow_right2.svg" type="Texture" id=5]
+[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -59,7 +58,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="SelectCharacter" type="Node2D"]
+[node name="NumberPlayers" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "custom_constants" ]
@@ -109,16 +108,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="name" type="Label" parent="." index="2"]
+[node name="values" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 200.0
-margin_top = 746.0
-margin_right = 600.0
-margin_bottom = 827.0
+margin_left = 198.0
+margin_top = 449.0
+margin_right = 598.0
+margin_bottom = 530.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -142,9 +141,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 175.0
+margin_top = 262.0
 margin_right = 800.0
-margin_bottom = 231.0
+margin_bottom = 318.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -153,7 +152,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Seu nnome?"
+text = "Número de jogadores"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -161,38 +160,31 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="btnP1" type="TextureButton" parent="." index="4"]
+[node name="players" type="Label" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 264.0
-margin_top = 343.0
-margin_right = 515.0
-margin_bottom = 735.0
+margin_top = 318.0
+margin_right = 800.0
+margin_bottom = 374.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-_sections_unfolded = [ "Rect" ]
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="p1" type="Sprite" parent="." index="5"]
-
-position = Vector2( 400, 522.355 )
-texture = ExtResource( 5 )
-vframes = 8
-hframes = 4
-_sections_unfolded = [ "Animation", "Transform" ]
-
-[node name="next" type="TextureButton" parent="." index="6"]
+[node name="next" type="TextureButton" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -214,18 +206,16 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 5 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
-[node name="Keyboard" parent="." index="7" instance=ExtResource( 7 )]
+[node name="Keyboard" parent="." index="6" instance=ExtResource( 6 )]
 
-margin_left = 3.0
-margin_top = 880.0
-margin_right = 739.0
-margin_bottom = 1196.0
-just_number = null
-
-[connection signal="pressed" from="btnP1" to="." method="_on_btnP1_pressed"]
+margin_left = 1.0
+margin_top = 583.0
+margin_right = 737.0
+margin_bottom = 658.0
+just_number = true
 
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 
