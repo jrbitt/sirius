@@ -39,6 +39,9 @@ func _choice_elements():
 				indexes.append(r)
 				c = c + 1
 				
+func _get_num_elements():
+	return num_elements
+	
 func _get_element(i):
 	if state == ELEMENTS:
 		return get_child(indexes[i])

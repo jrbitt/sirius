@@ -7,6 +7,7 @@
 script = ExtResource( 1 )
 player_name = "Default"
 color = -1
+index_avatar = 0
 avatar = null
 
 [node name="sprite" type="Sprite" parent="." index="0"]

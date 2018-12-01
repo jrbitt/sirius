@@ -4,6 +4,7 @@ export(String) var game_name
 export(int) var min_players
 export(int) var max_players
 export(String) var authors
+export(int) var max_turns 
 
 enum GameState{ ACTVATED, PAUSED, FINISHED}
 

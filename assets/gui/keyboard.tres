@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=2]
 
-[ext_resource path="res://assets/fonts/Chicle-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/SF Distant Galaxy.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -12,7 +12,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [resource]
 
-Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
@@ -20,5 +20,5 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/fonts/font = SubResource( 1 )
 Label/styles/normal = null
-_sections_unfolded = [ "Label", "Label/fonts" ]
+_sections_unfolded = [ "Label", "Label/colors", "Label/fonts" ]
 

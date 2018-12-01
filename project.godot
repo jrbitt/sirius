@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Sirius="*res://addons/node_mcu_connect/NodeMCU.tscn"
+GlobalGames="*res://games/GlobalGames.tscn"
 
 [display]
 

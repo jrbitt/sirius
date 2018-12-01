@@ -1,0 +1,233 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://games/common/DefineName.gd" type="Script" id=1]
+[ext_resource path="res://assets/gui/DefineName.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/fonts/SF Distant Galaxy.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/Stjldbl1.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/characters/criancas.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/arrow_right2.svg" type="Texture" id=6]
+[ext_resource path="res://addons/virtual_keyboard/scenes/Keyboard.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 1, 1, 1, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="Theme" id=2]
+
+Panel/styles/panel = SubResource( 1 )
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+_sections_unfolded = [ "Panel", "Panel/styles" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 52
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 44
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="SelectCharacter" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Panel" type="Panel" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -2.0
+margin_top = -32.0
+margin_right = 807.0
+margin_bottom = 1302.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 2 )
+_sections_unfolded = [ "Theme", "custom_styles" ]
+
+[node name="sirius" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_right = 782.0
+margin_bottom = 81.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Sírius I"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="name" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 746.0
+margin_right = 600.0
+margin_bottom = 827.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "123456789"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="choice" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 175.0
+margin_right = 800.0
+margin_bottom = 231.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Seu nnome?"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="btnP1" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 264.0
+margin_top = 343.0
+margin_right = 515.0
+margin_bottom = 735.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect" ]
+
+[node name="p1" type="Sprite" parent="." index="5"]
+
+position = Vector2( 400, 522.355 )
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="next" type="TextureButton" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 680.0
+margin_top = 1165.0
+margin_right = 757.0
+margin_bottom = 1221.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Keyboard" parent="." index="7" instance=ExtResource( 7 )]
+
+margin_left = 3.0
+margin_top = 880.0
+margin_right = 739.0
+margin_bottom = 1196.0
+
+[connection signal="pressed" from="btnP1" to="." method="_on_btnP1_pressed"]
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+
+[connection signal="key_pressed" from="Keyboard" to="." method="_on_Keyboard_key_pressed"]
+
+

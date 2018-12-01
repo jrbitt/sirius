@@ -2,6 +2,7 @@ extends Node2D
 
 export(String) var player_name = "Default" setget _set_player_name,_get_player_name
 export(int) var color = -1  setget _set_color,_get_color
+export(int) var index_avatar = 0
 export(Texture) var avatar = null  setget _set_avatar,_get_avatar
 
 var score = 0

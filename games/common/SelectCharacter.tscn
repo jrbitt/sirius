@@ -1,11 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://games/common/SelectCharacter.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/SF Distant Galaxy.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/fonts/Stjldbl1.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/characters/criancas.png" type="Texture" id=4]
 [ext_resource path="res://addons/color_buttons/color_buttons.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/gui/button_modulate.svg" type="Texture" id=6]
+[ext_resource path="res://addons/click_win/Collection.gd" type="Script" id=6]
+[ext_resource path="res://assets/gui/button_modulate.svg" type="Texture" id=7]
+[ext_resource path="res://assets/gui/arrow_left.svg" type="Texture" id=8]
+[ext_resource path="res://assets/gui/arrow_right.svg" type="Texture" id=9]
+[ext_resource path="res://assets/gui/arrow_right2.svg" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -87,18 +91,48 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="SelectCharacter" type="Control"]
+[sub_resource type="RectangleShape2D" id=7]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+custom_solver_bias = 0.0
+extents = Vector2( 32.0999, 29.4528 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.2499, 30.0516 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.8891, 30.6908 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.7865, 31.0004 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 33.3743, 31.6395 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.6821, 31.9491 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.1674, 31.6395 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.1674, 30.0516 )
+
+[node name="SelectCharacter" type="Node2D" index="0"]
+
 script = ExtResource( 1 )
 _sections_unfolded = [ "custom_constants" ]
 
@@ -172,61 +206,160 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="p1" type="Sprite" parent="." index="3"]
+[node name="btnP1" type="TextureButton" parent="." index="3"]
 
-position = Vector2( 250, 910 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 138.0
+margin_top = 742.0
+margin_right = 389.0
+margin_bottom = 1134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect" ]
+
+[node name="btnP2" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 142.0
+margin_top = 336.0
+margin_right = 393.0
+margin_bottom = 728.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect" ]
+
+[node name="btnP3" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 393.0
+margin_top = 749.0
+margin_right = 644.0
+margin_bottom = 1141.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect" ]
+
+[node name="btnP4" type="TextureButton" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 404.0
+margin_top = 340.0
+margin_right = 655.0
+margin_bottom = 732.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect" ]
+
+[node name="p1" type="Sprite" parent="." index="7"]
+
+position = Vector2( 267, 921 )
 texture = ExtResource( 4 )
 vframes = 8
 hframes = 4
 _sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="p2" type="Sprite" parent="." index="4"]
+[node name="p2" type="Sprite" parent="." index="8"]
 
-position = Vector2( 250, 525 )
+position = Vector2( 267, 536 )
 texture = ExtResource( 4 )
 vframes = 8
 hframes = 4
 frame = 1
 _sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="p3" type="Sprite" parent="." index="5"]
+[node name="p3" type="Sprite" parent="." index="9"]
 
-position = Vector2( 500, 910 )
+position = Vector2( 517, 921 )
 texture = ExtResource( 4 )
 vframes = 8
 hframes = 4
 frame = 2
 _sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="p4" type="Sprite" parent="." index="6"]
+[node name="p4" type="Sprite" parent="." index="10"]
 
-position = Vector2( 500, 525 )
+position = Vector2( 517, 536 )
 texture = ExtResource( 4 )
 vframes = 8
 hframes = 4
 frame = 3
 _sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="color_buttons" parent="." index="7" instance=ExtResource( 5 )]
+[node name="color_buttons" parent="." index="11" instance=ExtResource( 5 )]
 
-position = Vector2( 275.411, 1143.69 )
-
-[node name="c1" parent="color_buttons" index="0"]
-
-editor/display_folded = false
+editor/display_folded = true
+visible = false
+position = Vector2( 275.411, 1118.69 )
+script = ExtResource( 6 )
+num_elements = 3
 
 [node name="sprite" parent="color_buttons/c1" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c1" index="1"]
+
+shape = SubResource( 7 )
 
 [node name="c5" parent="color_buttons" index="1"]
 
-editor/display_folded = false
 description = "4"
 
 [node name="sprite" parent="color_buttons/c5" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c5" index="1"]
+
+shape = SubResource( 8 )
 
 [node name="c2" parent="color_buttons" index="2"]
 
@@ -234,7 +367,11 @@ description = "1"
 
 [node name="sprite" parent="color_buttons/c2" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c2" index="1"]
+
+shape = SubResource( 9 )
 
 [node name="c7" parent="color_buttons" index="3"]
 
@@ -242,7 +379,11 @@ description = "5"
 
 [node name="sprite" parent="color_buttons/c7" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c7" index="1"]
+
+shape = SubResource( 10 )
 
 [node name="c3" parent="color_buttons" index="4"]
 
@@ -250,7 +391,11 @@ description = "2"
 
 [node name="sprite" parent="color_buttons/c3" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c3" index="1"]
+
+shape = SubResource( 11 )
 
 [node name="c8" parent="color_buttons" index="5"]
 
@@ -258,7 +403,11 @@ description = "6"
 
 [node name="sprite" parent="color_buttons/c8" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c8" index="1"]
+
+shape = SubResource( 12 )
 
 [node name="c4" parent="color_buttons" index="6"]
 
@@ -266,7 +415,11 @@ description = "3"
 
 [node name="sprite" parent="color_buttons/c4" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="collision" parent="color_buttons/c4" index="1"]
+
+shape = SubResource( 13 )
 
 [node name="c6" parent="color_buttons" index="7"]
 
@@ -274,9 +427,100 @@ description = "7"
 
 [node name="sprite" parent="color_buttons/c6" index="0"]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
-[connection signal="changed_color" from="color_buttons" to="." method="_on_color_buttons_changed_color"]
+[node name="collision" parent="color_buttons/c6" index="1"]
+
+shape = SubResource( 14 )
+
+[node name="left" type="TextureButton" parent="." index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 49.0
+margin_top = 700.0
+margin_right = 100.0
+margin_bottom = 778.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="right" type="TextureButton" parent="." index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 679.0
+margin_top = 700.0
+margin_right = 730.0
+margin_bottom = 778.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 9 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="next" type="TextureButton" parent="." index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 680.0
+margin_top = 1165.0
+margin_right = 757.0
+margin_bottom = 1221.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[connection signal="pressed" from="btnP1" to="." method="_on_btnP1_pressed"]
+
+[connection signal="pressed" from="btnP2" to="." method="_on_btnP2_pressed"]
+
+[connection signal="pressed" from="btnP3" to="." method="_on_btnP3_pressed"]
+
+[connection signal="pressed" from="btnP4" to="." method="_on_btnP4_pressed"]
+
+[connection signal="clicked" from="color_buttons" to="." method="_on_color_buttons_clicked"]
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 
 
 [editable path="color_buttons"]

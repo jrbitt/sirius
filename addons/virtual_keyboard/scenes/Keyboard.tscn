@@ -1,15 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/virtual_keyboard/scripts/Keyboard.gd" type="Script" id=1]
 [ext_resource path="res://assets/gui/back_key.svg" type="Texture" id=2]
 [ext_resource path="res://assets/gui/keyboard.tres" type="Theme" id=3]
 [ext_resource path="res://addons/virtual_keyboard/scenes/Key.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/gui/enter_key.svg" type="Texture" id=5]
-[ext_resource path="res://assets/gui/space_key.svg" type="Texture" id=6]
+[ext_resource path="res://assets/gui/backspace.svg" type="Texture" id=5]
+[ext_resource path="res://assets/gui/enter_key.svg" type="Texture" id=6]
+[ext_resource path="res://assets/gui/space_key.svg" type="Texture" id=7]
 
-
-
-[node name="Keyboard" type="MarginContainer"]
+[node name="Keyboard" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -65,8 +64,8 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="k1" parent="lines/liine0" index="0" instance=ExtResource( 4 )]
 
-margin_left = 62.0
-margin_right = 122.0
+margin_left = 30.0
+margin_right = 90.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -74,8 +73,8 @@ key = "1"
 
 [node name="k2" parent="lines/liine0" index="1" instance=ExtResource( 4 )]
 
-margin_left = 126.0
-margin_right = 186.0
+margin_left = 94.0
+margin_right = 154.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -83,8 +82,8 @@ key = "2"
 
 [node name="k3" parent="lines/liine0" index="2" instance=ExtResource( 4 )]
 
-margin_left = 190.0
-margin_right = 250.0
+margin_left = 158.0
+margin_right = 218.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -92,8 +91,8 @@ key = "3"
 
 [node name="k4" parent="lines/liine0" index="3" instance=ExtResource( 4 )]
 
-margin_left = 254.0
-margin_right = 314.0
+margin_left = 222.0
+margin_right = 282.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -101,8 +100,8 @@ key = "4"
 
 [node name="k5" parent="lines/liine0" index="4" instance=ExtResource( 4 )]
 
-margin_left = 318.0
-margin_right = 378.0
+margin_left = 286.0
+margin_right = 346.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -110,8 +109,8 @@ key = "5"
 
 [node name="k6" parent="lines/liine0" index="5" instance=ExtResource( 4 )]
 
-margin_left = 382.0
-margin_right = 442.0
+margin_left = 350.0
+margin_right = 410.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -119,8 +118,8 @@ key = "6"
 
 [node name="k7" parent="lines/liine0" index="6" instance=ExtResource( 4 )]
 
-margin_left = 446.0
-margin_right = 506.0
+margin_left = 414.0
+margin_right = 474.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -128,8 +127,8 @@ key = "7"
 
 [node name="k8" parent="lines/liine0" index="7" instance=ExtResource( 4 )]
 
-margin_left = 510.0
-margin_right = 570.0
+margin_left = 478.0
+margin_right = 538.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -137,8 +136,8 @@ key = "8"
 
 [node name="k9" parent="lines/liine0" index="8" instance=ExtResource( 4 )]
 
-margin_left = 574.0
-margin_right = 634.0
+margin_left = 542.0
+margin_right = 602.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
@@ -146,12 +145,22 @@ key = "9"
 
 [node name="k10" parent="lines/liine0" index="9" instance=ExtResource( 4 )]
 
-margin_left = 638.0
-margin_right = 698.0
+margin_left = 606.0
+margin_right = 666.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
 theme = ExtResource( 3 )
 key = "0"
+
+[node name="back" parent="lines/liine0" index="10" instance=ExtResource( 4 )]
+
+margin_left = 670.0
+margin_right = 730.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+key = "back"
+normal_key = ExtResource( 5 )
+special = true
 
 [node name="line1" type="HBoxContainer" parent="lines" index="1"]
 
@@ -378,7 +387,7 @@ rect_min_size = Vector2( 120, 60 )
 theme = ExtResource( 3 )
 _sections_unfolded = [ "Margin", "Rect", "Theme" ]
 key = "enter"
-normal_key = ExtResource( 5 )
+normal_key = ExtResource( 6 )
 special = true
 
 [node name="line3" type="HBoxContainer" parent="lines" index="3"]
@@ -490,7 +499,7 @@ rect_min_size = Vector2( 210, 60 )
 theme = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Rect", "Theme" ]
 key = "space"
-normal_key = ExtResource( 6 )
+normal_key = ExtResource( 7 )
 special = true
 
 

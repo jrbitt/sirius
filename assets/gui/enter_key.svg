@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="back_key.svg">
+   sodipodi:docname="enter_key.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="-7.9752844"
+     inkscape:cx="-149.04671"
      inkscape:cy="-54.569867"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -66,7 +66,7 @@
        y="115.14369"
        ry="4.670146" />
     <rect
-       style="opacity:1;vector-effect:none;fill:#fff44d;fill-opacity:1;stroke:#847d00;stroke-width:0.75871217;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:#3772ff;fill-opacity:1;stroke:#001a58;stroke-width:0.75871217;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4485"
        width="30.991287"
        height="14.860297"
