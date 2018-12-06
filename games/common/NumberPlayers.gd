@@ -14,16 +14,15 @@ func _ready():
 	game = GlobalGames.get_node("/root/GlobalGames/games/Game1")
 	min_p = game.min_players
 	max_p = game.max_players
-	$players.text = "De "+min_p+" à "+max_p+" jogadores"
+	$players.text = "De "+str(min_p)+" à "+str(max_p)+" jogadores"
 
 
 func _on_Keyboard_key_pressed(k):
 	if k == "back":
-		line = line.substr(0,line.length()-1)
+		line = ""
 	else:
-		line = line + k
-		
-	var num = int(line)
-	if k >= min_p and k<=max_p:
-		players = num
-		$values.text = line
+		line = k
+		var num = int(line)
+		if num >= min_p and num<=max_p:
+			players = num
+			$values.text = line

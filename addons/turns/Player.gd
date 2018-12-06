@@ -2,7 +2,7 @@ extends Node2D
 
 export(String) var player_name = "Default" setget _set_player_name,_get_player_name
 export(int) var color = -1  setget _set_color,_get_color
-export(int) var index_avatar = 0
+export(int) var index_avatar = 0 setget _set_index_avatar
 export(Texture) var avatar = null  setget _set_avatar,_get_avatar
 
 var score = 0
@@ -45,6 +45,11 @@ func _set_color(v):
 func _get_color():
 	return color
 	
+func _set_index_avatar(i):
+	index_avatar = i
+	if has_node("sprite"):
+		$sprite.frame = index_avatar
+		
 func _set_avatar(v):
 	avatar = v
 	if has_node("sprite"):

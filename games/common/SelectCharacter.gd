@@ -57,11 +57,17 @@ func _on_btnP4_pressed():
 	$p4.modulate = Color(0.212,0.447,1,0.5)
 	perso = $p4
 
+func _ready():
+	perso = $p1
+	
 func _on_next_pressed():
 	var p = player_scene.instance()
 	p.color = index
 	p.index_avatar = perso.frame
-	GlobalGames.get_node("players").add_child(p)
-	get_tree().change_scene("res://games/game1/Game1.tscn")
+	p._set_avatar(perso.texture)
+	var pls = GlobalGames.get_node("players")
+	pls.add_child(p)
+	print(GlobalGames.get_node("players").get_child_count())
+	get_tree().change_scene("res://games/common/DefineName.tscn")
 	
 	

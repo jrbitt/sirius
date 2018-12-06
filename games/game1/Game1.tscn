@@ -135,7 +135,7 @@ game_state = null
 
 [node name="background" type="Sprite" parent="gui" index="0"]
 
-position = Vector2( 403.992, 636.28 )
+position = Vector2( 401.992, 636.28 )
 texture = ExtResource( 2 )
 
 [node name="quiz" type="Sprite" parent="gui" index="1"]
@@ -156,8 +156,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 num_elements = 3
 
 [node name="button1" parent="gui/buttons" index="0" instance=ExtResource( 6 )]
-
-editor/display_folded = true
 
 [node name="sprite" parent="gui/buttons/button1" index="0"]
 
@@ -248,10 +246,7 @@ _sections_unfolded = [ "custom_fonts", "custom_styles" ]
 
 [node name="header" parent="gui" index="4" instance=ExtResource( 10 )]
 
-margin_left = 126.0
-margin_top = 174.0
-margin_right = 640.0
-margin_bottom = 262.0
+position = Vector2( 139.383, 209.075 )
 _sections_unfolded = [ "Grow Direction", "Size Flags", "Visibility" ]
 
 [node name="tokens" type="Node2D" parent="." index="1"]

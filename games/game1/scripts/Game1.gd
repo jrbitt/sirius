@@ -29,14 +29,18 @@ func _turn():
 		btns[i]._set_enabled(true)
 		btns[i]._set_description(c._get_description())
 
-func _ready():
-	#$secret_word.word = "Macaco".to_upper()
+func _start():
 	players = get_node("/root/GlobalGames/players")
 	self.connect("update_score",$gui/header,"_on_game_update_score")
 	players.connect("new_turn",$gui/header,"_on_players_new_turn")
 	
 	players._first_turn()
 	_turn()
+	
+func _ready():
+	if GlobalGames.start_game:
+		_start()
+	
 				
 func _on_buttons_clicked(description, index):
 	if description == chunck._get_description():
@@ -45,7 +49,8 @@ func _on_buttons_clicked(description, index):
 		emit_signal("update_score",current_player._get_score())
 	else:
 		if current_player._get_errors() == 4:
-			print(GlobalGames._winners())
+			GlobalGames._winners()
+			get_tree().change_scene("res://games/common/EndGame.tscn")
 		else:
 			$leonardo.frame = 1
 			current_player._add_score(-3)
@@ -66,7 +71,8 @@ func _on_animation_animation_finished(anim_name):
 		if not players._finish():
 			_turn()
 		else:
-			print(GlobalGames._winners())
+			GlobalGames._winners()
+			get_tree().change_scene("res://games/common/EndGame.tscn")
 
 #--------------------------------------------------
 func _on_Keyboard_enter_pressed(s):

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://addons/turns/Player.gd" type="Script" id=1]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 player_name = "Default"
@@ -11,5 +11,9 @@ index_avatar = 0
 avatar = null
 
 [node name="sprite" type="Sprite" parent="." index="0"]
+
+vframes = 8
+hframes = 4
+_sections_unfolded = [ "Animation" ]
 
 

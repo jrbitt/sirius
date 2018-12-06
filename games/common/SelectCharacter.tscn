@@ -91,47 +91,47 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.0999, 29.4528 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 29.2499, 30.0516 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 29.8891, 30.6908 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 31.7865, 31.0004 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 33.3743, 31.6395 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
 extents = Vector2( 27.6821, 31.9491 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=12]
 
 custom_solver_bias = 0.0
 extents = Vector2( 31.1674, 31.6395 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=13]
 
 custom_solver_bias = 0.0
 extents = Vector2( 31.1674, 30.0516 )
 
-[node name="SelectCharacter" type="Node2D" index="0"]
+[node name="SelectCharacter" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "custom_constants" ]
@@ -347,7 +347,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c1" index="1"]
 
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="c5" parent="color_buttons" index="1"]
 
@@ -359,7 +359,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c5" index="1"]
 
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="c2" parent="color_buttons" index="2"]
 
@@ -371,7 +371,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c2" index="1"]
 
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="c7" parent="color_buttons" index="3"]
 
@@ -383,7 +383,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c7" index="1"]
 
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="c3" parent="color_buttons" index="4"]
 
@@ -395,7 +395,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c3" index="1"]
 
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="c8" parent="color_buttons" index="5"]
 
@@ -407,7 +407,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c8" index="1"]
 
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="c4" parent="color_buttons" index="6"]
 
@@ -419,7 +419,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c4" index="1"]
 
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="c6" parent="color_buttons" index="7"]
 
@@ -431,7 +431,7 @@ texture = ExtResource( 7 )
 
 [node name="collision" parent="color_buttons/c6" index="1"]
 
-shape = SubResource( 14 )
+shape = SubResource( 13 )
 
 [node name="left" type="TextureButton" parent="." index="12"]
 
