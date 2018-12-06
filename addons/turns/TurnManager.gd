@@ -34,8 +34,11 @@ func _get_best():
 func _first_turn():
 	emit_signal("new_turn", _get_current())
 	
-func _ready():
+func _count_players():
 	max_players = get_child_count()
+	
+func _ready():
+	_count_players()
 
 func _next():
 	current_index = current_index + 1

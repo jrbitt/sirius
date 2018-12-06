@@ -34,6 +34,7 @@ func _start():
 	self.connect("update_score",$gui/header,"_on_game_update_score")
 	players.connect("new_turn",$gui/header,"_on_players_new_turn")
 	
+	players._count_players()
 	players._first_turn()
 	_turn()
 	

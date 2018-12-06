@@ -120,7 +120,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[node name="Game1" type="Node2D" index="0"]
+[node name="Game1" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -132,6 +132,8 @@ max_turns = 3
 game_state = null
 
 [node name="gui" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
 
 [node name="background" type="Sprite" parent="gui" index="0"]
 
@@ -150,6 +152,7 @@ texture = ExtResource( 4 )
 
 [node name="buttons" type="Node2D" parent="gui" index="3"]
 
+editor/display_folded = true
 position = Vector2( 400, 776.93 )
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Z Index" ]

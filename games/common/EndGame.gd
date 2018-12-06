@@ -5,10 +5,10 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	if GlobalGames.winners_name.length()>1:
+	if GlobalGames.winners_name.size()>1:
 		$message.text = "Empate"
 	else:
-		$message.text = GlobalGames.winners_name[0]
+		$message.text = GlobalGames.winners_name[0]+" venceu"
 		
 	$points.text= str(GlobalGames.best_score)
 
