@@ -1,0 +1,8 @@
+Royal Blue
+FireBrick
+SeaGreen
+Gold
+OrangeRed
+DimGray
+White
+LightPink
